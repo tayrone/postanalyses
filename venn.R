@@ -1,6 +1,8 @@
 library(VennDiagram)
 library(RTN)
 library(gdata)
+library(SuperExactTest)
+
 
 subgroups <- c("g3", "g4", "shh")
 names(subgroups) <- c("Group3", "Group4", "SHH")
@@ -108,4 +110,8 @@ venn.diagram(
 )
 
 
-gdata::keep(subgroups, sure = T)
+#gdata::keep(subgroups, sure = T)
+
+load("../expression_analysis/rdata_files/tfs.RData")
+
+supertest(list(g3_interest, g4_interest, shh_interest), n = length(tfs))$P.value
