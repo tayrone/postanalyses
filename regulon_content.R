@@ -4,7 +4,7 @@ library(gdata)
 interesse_regs <- c("BHLHE41", "CAMTA1", "ZNF365", "KCNIP3", "RFX4", "SOX2", 
                     "NACC2", "ZNF385B", "NR1D1", "LHX4")
 
-subgroups <- c("g3", "g4", "shh")
+subgroups <- c("g3", "g4", "shh", "no_wnt")
 
 for(subgroup in subgroups){
 
@@ -24,7 +24,9 @@ for(subgroup in subgroups){
     
     gostres <- gost(query = regulon_content[i],
                     organism = "hsapiens", 
-                    sources = c("GO:BP", "KEGG", "REAC"))
+                    sources = c("GO:BP", "KEGG", "REAC"),
+                    user_threshold = 0.01,
+                    correction_method = "bonferroni")
     
     
     terms <- append(terms, gostres[["result"]][["term_name"]])
