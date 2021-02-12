@@ -49,8 +49,8 @@ for(subgroup in subgroups){
 
 venn.diagram(
   x = list(g3_mrs$Regulon, g4_mrs$Regulon, shh_mrs$Regulon),
-  category.names = c("Grupo 3" , "Grupo 4" , "SHH"),
-  main = "Reguladores Mestres",
+  category.names = c("Group 3" , "Group 4" , "SHH"),
+  main = "Master Regulators",
   filename = "./venn_plots/rms_venn_diagramm.png",
   output = TRUE, height = 5000, width = 6500, resolution = 750
 )
@@ -70,8 +70,8 @@ for(subgroup in names(subgroups)){
 
 venn.diagram(
   x = list(Group3_dm_regulons, Group4_dm_regulons, SHH_dm_regulons),
-  category.names = c("Grupo 3" , "Grupo 4" , "SHH"),
-  main = "Regulons Diferencialmente Metilados",
+  category.names = c("Group 3" , "Group 4" , "SHH"),
+  main = "Differentially Methylated Regulons",
   filename = "./venn_plots/dm_regulons_venn_diagramm.png",
   output = TRUE, height = 5000, width = 6500, resolution = 750
 )

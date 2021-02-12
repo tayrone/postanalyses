@@ -5,7 +5,7 @@ library(tidyverse)
 interesse_regs <- c("BHLHE41", "CAMTA1", "ZNF365", "KCNIP3", "RFX4", "SOX2", 
                     "NACC2", "ZNF385B", "NR1D1", "LHX4")
 
-subgroups <- c("g3", "g4", "shh", "no_wnt")
+subgroups <- c("g3", "g4", "shh")
 
 
 #---- Writes down csv files with the content of each regulon, for possible 
